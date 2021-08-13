@@ -1,10 +1,10 @@
-package com.spring.orm.api;
+package com.hibernate;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootHibernateApplicationTests {
+class HibernateintegrationApplicationTests {
 
 	@Test
 	void contextLoads() {

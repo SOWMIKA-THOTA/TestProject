@@ -1,4 +1,4 @@
-package com.spring.orm.api.controller;
+package com.hibernate.controller;
 
 import java.util.List;
 
@@ -9,25 +9,26 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.spring.orm.api.dao.PersonDao;
-import com.spring.orm.api.model.Person;
+import com.hibernate.dao.PersonDao;
+import com.hibernate.model.Person;
 
 @RestController
-@RequestMapping("/spring-boot-orm")
+@RequestMapping("/orm")
 public class PersonController {
-	
+
 	@Autowired
 	private PersonDao dao;
-	
-	
+
 	@PostMapping("/savePerson")
 	public String save(@RequestBody Person person) {
-		dao.savePerson(person);
-		return "success";	
+		dao.saveperson(person);
+		return "saved successfully";
 	}
-	@GetMapping("/getALL")
-	public List<Person> getALLPersons(){
-		return dao.getPersons();
+
+	@GetMapping("/getAllPersons")
+	public List<Person> getAllperson() {
+		return dao.getpersons();
+
 	}
 
 }
